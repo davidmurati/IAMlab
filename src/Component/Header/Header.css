@@ -9,7 +9,7 @@ body {
     display: flex;
     justify-content:end;
     align-items:flex-start;
-    color: #d8d2d2;
+    color: #383838;
     text-decoration: none;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: bold;
@@ -18,13 +18,13 @@ body {
   
   /* Nav links styles */
   a {
-    color: #d8d2d2;
+    color: #383838;
     text-decoration: none;
     padding: 5px;
   }
 
   nav a {
-    color: #fff;
+    color: #383838;
     text-decoration: none;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: bold;

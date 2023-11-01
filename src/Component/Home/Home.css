@@ -7,7 +7,7 @@ body {
    
     margin: 0;
     padding: 0;
-    background-color: #cacaca; /* Agrega el color de fondo */
+    background-color: #f3f3f3; /* Agrega el color de fondo */
     
   }
   
@@ -143,7 +143,7 @@ body {
 
   h1{
     font-size: 40px ;
-    color: #424242;
+    color: #383838;
     text-align: center;
   }
 
@@ -154,7 +154,7 @@ body {
 
   h4{
     font-size: 20px ;
-    color: #f0efef;
+    color: #383838;
     text-align: center;
     text-align: center;
     

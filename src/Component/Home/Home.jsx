@@ -57,7 +57,7 @@ const supabase = createClient(import.meta.env.VITE_APP_SUPABASE_URL,
 
     <div className="card3">
         <h1>IAM</h1>
-        <h4>Bienvenido a la app de GERENCIA AGIL, sea una empresa de triple impacto y gane dinero en el proceso</h4>
+        <h4>Bienvenido a la app de GERENCIA ÁGIL, sea una empresa de triple impacto y gane dinero en el proceso</h4>
         </div>
 
       <div className="logo-container">
