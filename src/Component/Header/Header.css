@@ -7,7 +7,7 @@ body {
   /* Header styles */
   nav {
     display: flex;
-    justify-content:end;
+    justify-content:space-between;
     align-items:flex-start;
     color: #383838;
     text-decoration: none;
@@ -39,6 +39,13 @@ body {
     color: #7a90f3;
     text-decoration: none;
     text-underline-offset: none;
+  }
+
+  .logo-container2 {
+    display: flex;
+    align-items: left;
+    width: 5%;
+    
   }
 
 

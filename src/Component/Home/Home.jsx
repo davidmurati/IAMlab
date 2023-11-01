@@ -10,6 +10,7 @@ import automaticoia from './automaticoia.jpg';
 
 
 
+
 const Home = () => {
 
 const [email, setEmail] = useState('');
@@ -55,11 +56,13 @@ const supabase = createClient(import.meta.env.VITE_APP_SUPABASE_URL,
 
     <form onSubmit={handleSubmit}>
     <div>
+     
 
     <div className="card3">
         <h1>IAM</h1>
-        <h4>Bienvenido a la app de GERENCIA ÁGIL, sea una empresa de triple impacto y gane dinero en el proceso.</h4>
+        <h4>Bienvenido a la web de registro para la app de GERENCIA ÁGIL, sea una empresa de triple impacto y gane dinero en el proceso.</h4>
         </div>
+
 
       <div className="logo-container">
         <img src={portada} className="App-logo" alt="logo" />
@@ -131,16 +134,16 @@ const supabase = createClient(import.meta.env.VITE_APP_SUPABASE_URL,
             <h3>{"Contacto"}</h3>
             <img src={contacto} className="App-logo2" alt="logo"/>
             <div className="card3">
-            <h3>{"Numeros de contacto"}</h3>
-            <p>{"En construcción 1"}</p>
+            <h3>{"WhatsApp"}</h3>
+            <p>{"+58 4142571406  /  +58 4142744700  "}</p>
             </div>
             <div className="card3">
             <h3>{"Correo"}</h3>
-            <p>{"En construcción 2"}</p>
+            <p>{"gerenciamasagil@gmail.com  📧"}</p>
             </div>
             <div className="card3">
             <h3>{"Redes"}</h3>
-            <p>{"En construcción 3"}</p>
+            <p>{"En construcción 3  🛑"}</p>
             </div>
 
             
