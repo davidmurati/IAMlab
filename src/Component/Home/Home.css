@@ -1,0 +1,184 @@
+/* General styles */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: flex;
+   
+    margin: 0;
+    padding: 0;
+    background-color: #cacaca; /* Agrega el color de fondo */
+    
+  }
+  
+  /* Form styles */
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    
+  }
+  
+  /* Logo container styles */
+  .logo-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 100%;
+    min-width: 300px;
+  }
+
+  
+  /* Logo styles */
+  .App-logo {
+    height: 100%;
+    width: 100%;
+    
+    
+  }
+
+  /* Logo styles */
+  .App-logo2 {
+    height: 100%;
+    width: 100%;
+    
+  }
+
+  .App-logo1 {
+    width: 150px;
+    max-width: 200px;
+    height: 150px;
+    max-height: 200px;
+    margin-bottom: 10px;
+    
+  }
+  
+  /* Main styles */
+  main {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Button styles */
+  button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* Button styles on hover */
+  button[type="submit"]:hover {
+    background-color: #3e8e41;
+  }
+
+
+  .card {
+    width: auto;
+    height: auto;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    background-color: #f2f2f2;
+    
+  }
+
+  .card2 {
+    width: auto;
+    height: auto;
+    padding: 20px;
+    text-align: center;
+    margin: 20px;
+    background-color: #f0efef;
+  }
+
+  .card3 {
+    width: auto;
+    height: auto;
+    text-align: left;
+    margin: 20px;
+  }
+  
+  .container {
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    
+  }
+
+
+  .card4 {
+    width: 50%;
+    height: auto;
+    padding: 20px;
+    background-color: #f2f2f2;
+
+    text-align:justify;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .card5 {
+    width: auto;
+    height: auto;
+    padding: 20px;
+    background-color: #f2f2f2;
+
+    text-align:justify;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+
+  h1{
+    font-size: 40px ;
+    color: #424242;
+    text-align: center;
+  }
+
+  h2{
+    color: #f0efef;
+    text-align: center;
+  }
+
+  h4{
+    font-size: 20px ;
+    color: #f0efef;
+    text-align: center;
+    text-align: center;
+    
+  }
+
+  
+  
+  a {
+    color: #0059b3;
+    text-decoration: none;
+    padding: 5px;
+    text-align: center;
+  }
+
+  .boton[type="submit"] {
+    background-color: #6c6e70;
+    align-items: center;
+    width: 30%;
+    height: 20%;
+  }
+
+  .boton[type="submit"]:hover {
+    background-color: #0059b3;
+    align-items: center;
+    width: 30%;
+    height: 20%;
+  }
