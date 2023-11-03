@@ -17,10 +17,8 @@ const Header = () => {
 
       <div className="novegacion">
 
-      <a href="/">INICIO</a>
-      <a href="/#Nosotros">NOSOTROS</a> 
-      <a href="/#Serv">SERVICIOS</a>
-      <a href="/#Contacto">CONTACTO</a>
+      <a href="http://gerenciaagil.com/">INICIO</a>
+      
       </div>
      
     </nav>

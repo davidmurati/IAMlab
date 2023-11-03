@@ -6,6 +6,7 @@ import nosotros from './nosotros.jpg';
 import contacto from './contacto.jpg';
 import portada from './portada.jpg';
 import automaticoia from './automaticoia.jpg';
+import MultiSelect from 'multiselect-react-dropdown'
 
 
 
@@ -15,7 +16,11 @@ const Home = () => {
 
 const [email, setEmail] = useState('');
 const [password, setPassword] = useState('');
+const [option, setOption] = useState('');
 
+
+const [food, setfood] = useState(["A","B","C","D"
+]);
 
 
 const supabase = createClient(import.meta.env.VITE_APP_SUPABASE_URL, 
@@ -29,12 +34,14 @@ const supabase = createClient(import.meta.env.VITE_APP_SUPABASE_URL,
 
     try {
      
-      if (email!="") {
+      if (email!="" )  {
+        if ( option.length!=0) {
         const { error } = await supabase
         .from('Interesados')
-        .insert({ Correo: email})
+        .insert({ Correo: email, Alternativas: option})
         alert('Se envio la solicitud');
       }
+    }
         
 
     } catch (error) {
@@ -51,6 +58,13 @@ const supabase = createClient(import.meta.env.VITE_APP_SUPABASE_URL,
        
     }, []);
 
+     // sacar dato del selector para enviarlo con el boton que es la otra funcion 
+  const find = ({ value }) => {
+    
+    console.log(value);
+    setOption(value);
+  };
+
   
   return (
 
@@ -60,96 +74,16 @@ const supabase = createClient(import.meta.env.VITE_APP_SUPABASE_URL,
 
     <div className="card3">
         <h1>GERENCIA ÁGIL</h1>
-        <h4>Bienvenido a la web de registro para la app de GERENCIA ÁGIL, sea una empresa de triple impacto y gane dinero en el proceso.</h4>
+        
         </div>
 
 
       <div className="logo-container">
-        <img src={portada} className="App-logo" alt="logo" />
+        <img src={automaticoia} className="App-logo" alt="logo" />
         
         </div>
         
         <main>
-        
-
-        <section id="Nosotros">
-        <div className="card">
-            
-            <h3>{"Nosotros"}</h3>
-            <img src={nosotros} className="App-logo2" alt="logo"/>
-            <div className="card2">
-            <h3>{"Quienes somos "}</h3>
-            <p>{"Somos una organización dedicada a desarrollar planes que optimicen los recursos y se tenga una responsabilidad social. Creemos que el desarrollo sostenible y la responsabilidad social van de la mano. Por eso, nos esforzamos por crear planes que sean rentables para nuestros clientes, pero que también sean sostenibles y respetuosos con el medio ambiente."}</p>
-            </div>
-            <div className="card2">
-            <h3>{"Misión"}</h3>
-            <p>{"Nuestra misión es proporcionar asesoramiento de alta calidad a nuestros clientes para que logren aprovechar sus recursos y residuos de forma que impacten en sus finanzas, genere bienestar a sus comunidades e impacte positivamente el ambiente."}</p>
-            </div>
-            <div className="card2">
-            <h3>{"Visión"}</h3>
-            <p>{"Nuestra visión es convertirnos en el líder en consultoría, ofreciendo soluciones innovadoras y sostenibles para las empresas y organizaciones que buscan mejorar su optimizar sus recursos mientras mejoran a su vez el impacto social y ambiental. Queremos ser reconocidos por nuestra capacidad para entender las necesidades específicas de cada cliente y desarrollar planes personalizados que se adapten a sus objetivos y presupuestos."}</p>
-            </div>
-
-            
-          </div>
-          </section>
-
-          <section id="Serv">
-
-          <div className="card">
-
-          <h3>{"Servicios"}</h3>
-
-
-          <div className="container">
-          
-        
-              <div className="card4">
-              <img src={automaticoia} className="App-logo1" alt="logo"/>
-              <div className="link">
-              <a  href="/#listaE"> Desarrollo automatizado </a>
-              <p>{"Realiza con ia planes sobre gestión de residuos y gestión energética"}</p>
-              </div>
-              </div>
-
-              <div className="card4">
-              <img src={asesoramientop2} className="App-logo1" alt="logo"/>
-              <div className="link">
-              <a  href="/#Contacto"> Asesoramiento personalizado </a>
-              <p>{"Implementa planes de gestión de residuos y gestión energética"}</p>
-              </div>
-              </div>
-              
-
-            
-            </div>
-
-            </div>
-          
-        </section>
-
-        <section id="Contacto">
-        <div className="card">
-            
-            <h3>{"Contacto"}</h3>
-            <img src={contacto} className="App-logo2" alt="logo"/>
-            <div className="card3">
-            <h3>{"WhatsApp"}</h3>
-            <p>{"+58 4142571406  /  +58 4142744700  "}</p>
-            </div>
-            <div className="card3">
-            <h3>{"Correo"}</h3>
-            <p>{"gerenciamasagil@gmail.com  📧"}</p>
-            </div>
-            <div className="card3">
-            <h3>{"Redes"}</h3>
-            <p>{"En construcción 3  🛑"}</p>
-            </div>
-
-            
-          </div>
-
-          </section>
 
           
 
@@ -157,11 +91,45 @@ const supabase = createClient(import.meta.env.VITE_APP_SUPABASE_URL,
 
             <div className="card">
             
-            <h3>{"Lista de espera para usar la inteligencia artificial de IAM"}</h3>
+            <h3>{"Lista de espera para usar la inteligencia artificial de Gerencia Ágil"}</h3>
             <label>
             Correo electrónico:
             <input  type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
             </label>
+
+            
+            
+            <div className="card3">
+            <label>
+             Opciones:
+            </label>
+            <p>{"Marca las opciones por la que estás interesado. (Puede ser una o varias)"}</p>
+           
+            <p>{"A) Indicadores de medición de la creación de valor económico, social y ambiental (no se guardarán datos)"} </p>
+            <p>{"B) Según resultados obtenidos en las mediciones, podrá por un precio único bajar lista propuesta de mejoras (no se guardarán datos)"}</p>
+            <p>{"C) Suscribirse a la página para mensualmente recibir un acompañamiento virtual para mejorar su creación de valor social, ambiental que mejore en la eficiencia e impacte positivamente en una reducción de la estructura de costos; guardando los datos de las mediciones, para generar propuestas personalizadas de mejora."}</p>
+            <p>{"D) Servicios de acompañamiento profesional en su organización con horas de consultoría para un desempeño superior e implementación de las iniciativas de cambio para lograr un modelo de negocio sostenible."}</p>
+            <p></p>
+            </div>
+
+            <div className="card6">
+            <div className="selector">
+            <MultiSelect
+              isObject={false}
+              onRemove={(event) => {
+                console.log(event);
+              }}
+              onSelect={(event) => {
+                setOption(event);
+                console.log(event);
+              }}
+              options={food}
+              
+              showCheckbox
+              />
+      
+            </div>
+            </div>
 
             <div className="card5">
             <button className="boton" type="submit">Enviar</button  >
